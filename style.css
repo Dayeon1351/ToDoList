@@ -1,12 +1,18 @@
-  h1{
-    color:white;
-    transition: color .5s ease-in-out;
-  }
-  
-  .clicked{
-    color : black;
-  }
-  
+ h1{
+  font-size: 500%;
+  color: white;
+  width: fit-content;
+  margin: auto;
+ }
+
+ .js-content{
+   background-color: rgba(255,255,255, 0.5);
+   width: fit-content;
+   margin: auto;
+   padding: 10px;
+ }
+
+
   .form,
   .greetings{
     display: none;
