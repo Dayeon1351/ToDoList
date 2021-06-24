@@ -7,9 +7,14 @@ function getWeather(lat,lon){
     ).then(function(response){
         return response.json();
     }).then(function(json){
+        console.dir(json);
         const temperature = json.main.temp;
         const place = json.name;
-        weather.innerText = `${temperature} @ ${place}`; 
+        weather.innerText = `${temperature}°C @ ${place}`; 
+
+        const weatherIcon = document.createElement("img");
+        weatherIcon.src = "http://openweathermap.org/img/wn/"+json.weather[0].icon+"@2x.png";
+        weather.appendChild(weatherIcon);
     });
 }
 
