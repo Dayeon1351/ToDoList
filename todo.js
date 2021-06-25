@@ -3,6 +3,7 @@ toDoInput = toDoForm.querySelector("input"),
 toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = 'toDos';
+const TODO_USER_LS = "currentUser";
 
 let toDos = [];
 
@@ -45,10 +46,17 @@ function paintToDo(text){
 }
 
 function handleSubmit(event){
+  const currentUser = localStorage.getItem(TODO_USER_LS);
+  
   event.preventDefault();
-  const currentValue = toDoInput.value;
-  paintToDo(currentValue);
-  toDoInput.value = "";
+  if (currentUser === null){
+    alert("Please enter your name!");
+  }else{
+    const currentValue = toDoInput.value;
+    paintToDo(currentValue);
+    toDoInput.value = "";
+  }
+  
 }
 
 function loadToDos(){
