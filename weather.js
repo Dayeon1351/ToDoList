@@ -13,7 +13,7 @@ function getWeather(lat,lon){
         weather.innerText = `${temperature}°C @ ${place}`; 
 
         const weatherIcon = document.createElement("img");
-        weatherIcon.src = "http://openweathermap.org/img/wn/"+json.weather[0].icon+"@2x.png";
+        weatherIcon.src = "https://openweathermap.org/img/wn/"+json.weather[0].icon+"@2x.png";
         weather.appendChild(weatherIcon);
     });
 }
