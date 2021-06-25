@@ -47,7 +47,6 @@ function paintToDo(text){
 
 function handleSubmit(event){
   const currentUser = localStorage.getItem(TODO_USER_LS);
-  
   event.preventDefault();
   if (currentUser === null){
     alert("Please enter your name!");
@@ -66,10 +65,7 @@ function loadToDos(){
     parsedToDos.forEach(function(toDo){
       paintToDo(toDo.text);
     });
-  }else{
-
   }
-
 }
 
 function init(){
