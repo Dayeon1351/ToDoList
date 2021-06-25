@@ -33,10 +33,6 @@ function handleGeoSucces(position){
     getWeather(latitude,longitude);
 }
 
-function handleGeoError(){
-
-}
-
 function askForCoords(){
     navigator.geolocation.getCurrentPosition(handleGeoSucces,handleGeoError);
 }
